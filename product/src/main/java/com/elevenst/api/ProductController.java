@@ -12,7 +12,6 @@ public class ProductController {
     @GetMapping(path = "{productId}")
     public String getProductInfo(@PathVariable String productId) {
 //        try {
-        t
 //            Thread.sleep(2000);
 //        } catch (InterruptedException e) {
 //            e.printStackTrace();
