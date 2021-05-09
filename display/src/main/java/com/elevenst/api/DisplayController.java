@@ -27,6 +27,6 @@ public class DisplayController {
     }
 
     private String getProductInfo() {
-        return feignProductRemoteService.getProductInfo("12345");
+        return productRemoteService.getProductInfo("12345");
     }
 }
