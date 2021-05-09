@@ -17,7 +17,7 @@ public class ProductRemoteServiceImpl implements ProductRemoteService {
     @Override
     @HystrixCommand(commandKey = "productInfo", fallbackMethod = "getProductInfoFallback")
     public String getProductInfo(String productId) {
-        return this.restTemplate.getForObject(url + productId, String.class);
+        return this.restTemplate.getForObject(url + productId, String.class); // 타임아웃은 디폴트 1초이다.
     }
 
     public String getProductInfoFallback(String productId, Throwable t) {
